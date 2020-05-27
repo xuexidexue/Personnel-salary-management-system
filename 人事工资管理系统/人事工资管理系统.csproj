@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98650CFC-8677-4FC8-BD7C-FA2F751A5C8A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>人事工资管理系统</RootNamespace>
+    <AssemblyName>人事工资管理系统</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mysql.data">
+      <HintPath>..\..\..\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComboxItem.cs" />
+    <Compile Include="department.cs" />
+    <Compile Include="MyDB.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="mysql.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="修改密码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="修改密码.Designer.cs">
+      <DependentUpon>修改密码.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wage.cs" />
+    <Compile Include="工资管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工资管理.Designer.cs">
+      <DependentUpon>工资管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据显示.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据显示.Designer.cs">
+      <DependentUpon>数据显示.cs</DependentUpon>
+    </Compile>
+    <Compile Include="管理员主界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理员主界面.Designer.cs">
+      <DependentUpon>管理员主界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="管理员工.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理员工.Designer.cs">
+      <DependentUpon>管理员工.cs</DependentUpon>
+    </Compile>
+    <Compile Include="管理管理员.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理管理员.Designer.cs">
+      <DependentUpon>管理管理员.cs</DependentUpon>
+    </Compile>
+    <Compile Include="管理部门.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理部门.Designer.cs">
+      <DependentUpon>管理部门.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="修改密码.resx">
+      <DependentUpon>修改密码.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工资管理.resx">
+      <DependentUpon>工资管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据显示.resx">
+      <DependentUpon>数据显示.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理员主界面.resx">
+      <DependentUpon>管理员主界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理员工.resx">
+      <DependentUpon>管理员工.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理管理员.resx">
+      <DependentUpon>管理管理员.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理部门.resx">
+      <DependentUpon>管理部门.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Annie_Splash_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Annie_Splash_51.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
